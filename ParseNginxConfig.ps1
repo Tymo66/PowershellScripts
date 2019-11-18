@@ -7,6 +7,9 @@ if (!(Test-Path $nginx_config))
     Write-Warning "$nginx.config not found in folder C:\nginx-1.17.5\conf"
 }
 
+$cert_pem_file = Get-ChildItem | Where-Object -Match "*.pem"
+$cert_key_file = Get-ChildItem | Where-Object -Match "*.key"
+
 [string]$nginx_config_content = ""
 $nginx_config_content = Get-Content -path $nginx_config -Raw
 
