@@ -1,4 +1,5 @@
-﻿[string]$nginx_config = "C:\nginx-1.17.5\conf\nginx.conf"
+﻿[string]$nginx_cert_folder = "C:\nginx-1.17.5\cert"
+[string]$nginx_config = "C:\nginx-1.17.5\conf\nginx.conf"
 
 
 if (!(Test-Path $nginx_config))
